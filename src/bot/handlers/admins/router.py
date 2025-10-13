@@ -69,7 +69,7 @@ async def reply_to_user(
     except TelegramAPIError as ex:
         await message.reply(text=f"{errors.copy_message} {str(ex)}")
     finally:
-        if successful_deliver:
+        if successful_deliver and messages.notify_admin_about_success_answer:
             await message.reply(text=messages.notify_admin_about_success_answer)
 
 

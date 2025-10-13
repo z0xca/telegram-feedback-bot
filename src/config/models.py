@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import Field
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings
@@ -12,7 +14,7 @@ class BotConfig(BaseSettings):
 
 
 class Messages(BaseSettings):
-    notify_user_about_success_deliver: str = Field(
+    notify_user_about_success_deliver: Optional[str] = Field(
         default="✅ Please wait for response."
     )
     help_message: str = Field(
@@ -29,7 +31,7 @@ class Messages(BaseSettings):
       </p>
     """
     )
-    notify_admin_about_success_answer: str = Field(default="✅ Answered.")
+    notify_admin_about_success_answer: Optional[str] = Field(default="✅ Answered.")
 
 
 class Errors(BaseSettings):

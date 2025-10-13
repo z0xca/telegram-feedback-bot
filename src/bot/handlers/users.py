@@ -71,7 +71,8 @@ async def handle_user_message(
             caption=caption,
         )
 
-    await message.reply(text=messages.notify_user_about_success_deliver)
+    if messages.notify_user_about_success_deliver:
+        await message.reply(text=messages.notify_user_about_success_deliver)
 
     return
 
