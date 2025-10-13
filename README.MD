@@ -36,7 +36,7 @@ You can [customize the bot's responses](deploy/docker/example.config.yaml#12), o
 
 ## Deploy
 
-Just copy [docker-compose.yml](deploy/docker/docker-compose.yml) and fill in [config.yaml](deploy/docker/config.yaml).
+Just copy [docker-compose.yml](deploy/docker/example.docker-compose.yml) and fill in [config.yaml](deploy/docker/example.config.yaml).
 
 Run container:
 
