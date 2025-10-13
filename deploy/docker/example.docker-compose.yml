@@ -1,7 +1,7 @@
 services:
   bot:
     container_name: telegram-feedback-bot
-    image: z0xca/telegram-feedback-bot:latest
+    image: ghcr.io/z0xca/telegram-feedback-bot:latest
     stop_signal: SIGINT
     restart: always
     volumes:
