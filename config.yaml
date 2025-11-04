@@ -24,11 +24,11 @@ messages:
        Just send your message and wait for a response!
       </p>
     notify_admin_about_success_answer: ✅ Answered.
-#
-#errors:
-#  unsupported_type: ❌ Unsupported message type.<br/>Please check <b>/help</b> command.
-#  too_long_message_text: ❌ Too long message text.
-#  too_long_message_caption: ❌ Too long message caption.
-#  copy_message: ❌ Error during copying
-#  extract_user_id: ❌ Error during extract_id
-#  chat_not_found: ❌ Chat not found. Make sure you have added the bot to the admin group
+
+errors:
+  unsupported_type: ❌ Unsupported message type.<br/>Please check <b>/help</b> command.
+  too_long_message_text: ❌ Too long message text.
+  too_long_message_caption: ❌ Too long message caption.
+  copy_message: ❌ Error during copying
+  extract_user_id: ❌ Error during extract_id
+  chat_not_found: ❌ Chat not found. Make sure you have added the bot to the admin group

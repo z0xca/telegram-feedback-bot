@@ -1,16 +1,12 @@
-# telegram-feedback-bot
-
-<p>
+## telegram-feedback-bot
 
 <a href="https://github.com/z0xca/telegram-feedback-bot/pkgs/container/telegram-feedback-bot"><img alt="telegram-feedback-bot" src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"></a>
-</p>
 
+Simple Telegram feedback bot based on [aiogram](https://github.com/aiogram/aiogram) and [sulguk](https://github.com/Tishka17/sulguk).
 
-Simple telegram-feedback bot based on [aiogram](https://github.com/aiogram/aiogram) and [sulguk](https://github.com/Tishka17/sulguk).
+Use this bot to communicate with users without sharing your personal contact details.
 
-Use this bot for communicate with users in case you do not want to provide your personal contacts. 
-
-> For example: you are administrator of telegram group or technical support provider.
+> For example: you are an administrator of a Telegram group
 
 ## Available commands
 
@@ -18,26 +14,14 @@ Use this bot for communicate with users in case you do not want to provide your 
 |:-------:|:-----------------:|
 |  /help  | Show help message |
 
-## Usage
+### Usage
 
-Messages with an **available content type** *(TEXT, ANIMATION, AUDIO, DOCUMENT, PHOTO, VIDEO, VOICE)* will be transferred to **admin group** or **admin chat**.
+Messages with of a supported type *(TEXT, ANIMATION, AUDIO, DOCUMENT, PHOTO, VIDEO, VOICE)* will be forwarded to the **admin group** or **admin chat** depending on the destination set via the `chat_id` variable in [`config.yaml`](config.yaml) in which you can also customize the bot's responses.
 
-*(See variable `chat_id` from [config.yaml](deploy/docker/example.config.yaml#L6))*
+### Deploy
 
-If the transfer is successful, the requesting party will be notified.
+Copy [`docker-compose.yaml`](docker-compose.yaml) and [`config.yaml`](config.yaml), then run:
 
-**Admin** can **answer** to message **by reply**. The answer will be sent to the person who asked.
-
-The user will receive the reply as a **reply** to the original message. If the message does not exist, the user will receive a response with a **separate message**.
-
-If the transfer is successful, the administrator will be notified.
-
-You can [customize the bot's responses](deploy/docker/example.config.yaml#12), or use default values.
-
-## Deploy
-
-Just copy [docker-compose.yml](deploy/docker/example.docker-compose.yml) and fill in [config.yaml](deploy/docker/example.config.yaml).
-
-Run container:
-
-`docker compose up -d`
+```bash
+docker compose up -d
+```
